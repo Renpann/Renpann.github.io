@@ -19,13 +19,17 @@
 
 <body>
   <div  >
-  <span id="init"></span>
+  <p id="init">0</p>
     <span>存储：</span>
     <span id="test"></span>
   </div>
 
   <script>
-    document.getElementById('init').innerHTML = 'loading了'
+  var i = 1 
+	setInterval(function(){
+	 document.getElementById('init').innerHTML = i++
+	},3000)
+   
       var str = window.localStorage.getItem('testStorage')
       if(str == 'testStroage'){
         console.log(document.getElementById('test'))
