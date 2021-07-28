@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>测试</title>
+ 
+</head>
+
+<body>
+  <div  >
+    <span>存储：</span>
+    <span id="test"></span>
+  </div>
+
+  <script>
+      var str = window.localStorage.getItem('testStorage')
+      if(str == 'testStroage'){
+        console.log(document.getElementById('test'))
+        document.getElementById('test').innerHTML = 'testStroage'
+      }else{
+        window.localStorage.setItem('testStorage','testStroage')
+      }
+  </script>
+</body>
+
+</html>
