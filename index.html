@@ -11,76 +11,103 @@
     * {
       box-sizing: border-box;
     }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
     .swiper-wrapper {
       width: 100%;
       height: 100%;
-      position: relative;
-      z-index: 1
+      position: absolute;
+      z-index: 2;
     }
 
     .swiper-slide {
       width: 100%;
       height: 100%;
-      position: absolute;
-      left: 0;
-      right: 0;
-      z-index: 2;
+      position: relative;
+      z-index:1;
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      display: none;
     }
+
     .swiper-slide.img {
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
-    .swiper-slide.text-view{
+
+    .swiper-slide.text-view {
       background-color: #000;
       position: relative;
-      z-index: 1
-    } 
+      z-index: 2
+    }
+
     .swiper-slide .text {
       width: 100%;
       height: auto;
-      padding: 8px 0;
+      padding: 6px 0;
       text-align: center;
       color: #fff;
-      font-size: 24px;
+      font-size: 20px;
       background: rgba(0, 155, 255, 0.5);
       position: absolute;
-      bottom:0;
-      z-index:3;
+      bottom: 0;
+      z-index: 9;
     }
-    .open-view{
-      width: 100%;
-      height: 100%;
-      background-color: #000;
-      position: relative;
-      z-index: 1
-    }
-    .open-view > div,.text-view > div {
+
+    .text-view>div {
       text-align: center;
-      width:100%;
-      height:200px;
-      line-height: 100px;
+      width: 100%;
       position: absolute;
-      left:0;
-      right:0;
-      top:0;
-      bottom:0;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
       z-index: 2;
       margin: auto;
-      letter-spacing: 20px;
-      font-size: 60px;
+      padding: 40 50px;
+      letter-spacing: 10px;
       color: red;
+    }
+
+    #openText {
+      display: block;
+    }
+
+    @media all and (min-width:385px) and (max-width:768px) {
+      .swiper-slide .text {
+        padding: 12px 0;
+        font-size: 40px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="swiper-wrapper">
-    <div class="open-view"><div>交通违法行为曝光台</div></div>
+    <!-- <div class="text-view swiper-slide">
+      <div>机动车不礼让斑马线曝光</div>
+    </div> -->
+    <!-- <div class="text-view swiper-slide">
+      <div>非机动车违法曝光</div>
+    </div>
+    <div class="text-view swiper-slide">
+      <div>违法停车曝光</div>
+    </div>
+    <div class="text-view swiper-slide">
+      <div>行人闯红灯曝光</div>
+    </div> -->
   </div>
   <script src="zepto.min.js"></script>
-  <script src="index.js?1"></script>
+  <script src="index.min.js?1"></script>
 </body>
 
 </html>
